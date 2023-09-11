@@ -58,7 +58,7 @@ public class Main
                }
           
                if(s.charAt(i) == ')'){
-                    while(!operator.isEmpty() && operator.peek() != '(' ){
+                    while(!operator.isEmpty() && operator.peek() != ')' ){
                         c.append(operator.pop());
                     }
                     if(!operator.isEmpty()  &&  operator.peek() ==  '('){
