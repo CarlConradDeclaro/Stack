@@ -28,7 +28,7 @@ public class Main
              v= x/y;
              break;
       }
-      return v;
+      return x;
   }    
     
     public static void main(String[] args) {
