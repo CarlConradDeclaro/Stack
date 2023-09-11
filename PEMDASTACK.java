@@ -28,7 +28,7 @@ public class Main
              v= x/y;
              break;
       }
-      return x;
+      return v;
   }    
     
     public static void main(String[] args) {
@@ -58,7 +58,7 @@ public class Main
                }
           
                if(s.charAt(i) == ')'){
-                    while(!operator.isEmpty() && operator.peek() != ')' ){
+                    while(!operator.isEmpty() && operator.peek() != '(' ){
                         c.append(operator.pop());
                     }
                     if(!operator.isEmpty()  &&  operator.peek() ==  '('){
