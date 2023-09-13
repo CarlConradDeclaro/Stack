@@ -1,17 +1,9 @@
-import java.util.Stack;
+ import java.util.Stack;
 import java.util.Scanner;
 
-public class PMDASCalculator {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter an expression: ");
-        String expression = sc.nextLine();
-
-        int result = calculatePMDAS(expression);
-        System.out.println("Result: " + result);
-    }
-
-    public static int calculatePMDAS(String expression) {
+class PMDAS{
+    
+     public static int calculatePMDAS(String expression) {
         Stack<Integer> values = new Stack<>();
         Stack<Character> operators = new Stack<>();
 
@@ -45,9 +37,7 @@ public class PMDASCalculator {
                     values.push(applyOperator(operator, operand1, operand2));
                 }
                 operators.push(ch);
-            } else {
-                throw new IllegalArgumentException("Invalid character: " + ch);
-            }
+            }  
         }
 
         while (!operators.isEmpty()) {
@@ -78,21 +68,39 @@ public class PMDASCalculator {
     }
 
     private static int applyOperator(char operator, int operand1, int operand2) {
-        switch (operator) {
+         int val =0;
+          switch (operator) {
             case '+':
-                return operand1 + operand2;
+                val = operand1 + operand2;
+                break;
             case '-':
-                return operand1 - operand2;
+                val = operand1 - operand2;
+                break;
             case '*':
-                return operand1 * operand2;
+                val = operand1 * operand2;
+                break;
             case '/':
-                if (operand2 == 0) {
-                    throw new ArithmeticException("Division by zero");
+                if (operand2 != 0) {
+                    val =  operand1 / operand2;
                 }
-                return operand1 / operand2;
-            default:
-                throw new IllegalArgumentException("Invalid operator: " + operator);
+                break;
         }
+           return val;
     }
 }
 
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        PMDAS pmdas = new PMDAS();
+        System.out.print("Enter an expression: ");
+        String expression = sc.nextLine();
+
+        int result = pmdas.calculatePMDAS(expression);
+        System.out.println("Result: " + result);
+    }
+
+   
+}
