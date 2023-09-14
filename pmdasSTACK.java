@@ -48,7 +48,6 @@ class PMDAS{
 
         return values.pop();
     }
-
     private static boolean isOperator(char ch) {
         return ch == '+' || ch == '-' || ch == '*' || ch == '/';
     }
@@ -65,7 +64,6 @@ class PMDAS{
                 return 0;
         }
     }
-
     private static int applyOperator(char operator, int operand1, int operand2) {
          int val =0;
           switch (operator) {
