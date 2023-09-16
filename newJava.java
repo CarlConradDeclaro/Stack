@@ -1,2 +1,2 @@
 int v =3;
-itn d =2;
+int d =2;
