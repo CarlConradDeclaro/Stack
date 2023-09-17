@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.datastructure;
+//package com.mycompany.datastructure;
 import java.util.Stack;
 /**
  *
