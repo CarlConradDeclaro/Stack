@@ -1,4 +1,4 @@
- import java.util.Stack;
+import java.util.Stack;
 import java.util.Scanner;
 
 //changes
@@ -86,8 +86,6 @@ class PMDAS{
            return val;
     }
 }
-
-
  class pmdasStack {
     
     public static void main(String[] args) {
@@ -99,6 +97,4 @@ class PMDAS{
         int result = pmdas.calculatePMDAS(expression);
         System.out.println("Result: " + result);
     }
-
-   
 }
