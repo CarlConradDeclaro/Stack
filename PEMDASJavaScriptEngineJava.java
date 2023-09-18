@@ -4,7 +4,8 @@ import javax.script.ScriptException;
 
 class PEMDASJavaScriptEngineJava{
        public static void main(String[] args) {
-            String expression = "1+2*(1+2)";
+            
+            String expression = "-1+2*(1+2)*4+1/2";
             
             ScriptEngineManager manager = new ScriptEngineManager();
             ScriptEngine engine = manager.getEngineByName("JavaScript");
